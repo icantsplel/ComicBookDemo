@@ -1,0 +1,20 @@
+﻿Comic Vine
+Key: 7526d9a37e10834d099fd4d3f8feda72f1efc995
+URL: https://comicvine.gamespot.com/api/activate
+Documentation: https://comicvine.gamespot.com/api/
+
+http://beta.comicvine.com/api/<singular_resource>/<resource_id>/?api_key=API_KEY
+
+Marvel
+Private Key: 1ec7adef9cbaeb1ca10db5193aa9acd43f52654c
+Public Key: f4b549d5b8c4fd72b5154f79e472ecd8
+Registered Domain: developer.marvel.com
+Documentation: https://developer.marvel.com/documentation/authorization
+Server side example: Authentication for Server-Side Applications
+Server-side applications must pass two parameters in addition to the apikey parameter:
+
+ts - a timestamp (or other long string which can change on a request-by-request basis)
+hash - a md5 digest of the ts parameter, your private key and your public key (e.g. md5(ts+privateKey+publicKey)
+For example, a user with a public key of "1234" and a private key of "abcd" could construct a valid call as follows: 
+http://gateway.marvel.com/v1/public/comics?ts=1&apikey=1234&hash=ffd275c5130566a2916217b101f26150 (the hash value is the md5 digest of 1abcd1234)
+test hash:     1508323539+1ec7adef9cbaeb1ca10db5193aa9acd43f52654c+f4b549d5b8c4fd72b5154f79e472ecd8                             38C060D1172D7B3D1CC8B47B4B334D78

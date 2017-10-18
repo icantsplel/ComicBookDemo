@@ -1,0 +1,13 @@
+C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApi\bin\Release\netcoreapp2.0\ComicDemoApi.deps.json
+C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApi\bin\Release\netcoreapp2.0\ComicDemoApi.runtimeconfig.json
+C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApi\bin\Release\netcoreapp2.0\ComicDemoApi.runtimeconfig.dev.json
+C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApi\bin\Release\netcoreapp2.0\ComicDemoApi.dll
+C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApi\bin\Release\netcoreapp2.0\ComicDemoApi.pdb
+C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApi\bin\Release\netcoreapp2.0\ComicDemoModels.dll
+C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApi\bin\Release\netcoreapp2.0\ComicDemoModels.pdb
+C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApi\obj\Release\netcoreapp2.0\ComicDemoApi.csprojResolveAssemblyReference.cache
+C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApi\obj\Release\netcoreapp2.0\ComicDemoApi.csproj.CoreCompileInputs.cache
+C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApi\obj\Release\netcoreapp2.0\ComicDemoApi.AssemblyInfoInputs.cache
+C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApi\obj\Release\netcoreapp2.0\ComicDemoApi.AssemblyInfo.cs
+C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApi\obj\Release\netcoreapp2.0\ComicDemoApi.dll
+C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApi\obj\Release\netcoreapp2.0\ComicDemoApi.pdb
