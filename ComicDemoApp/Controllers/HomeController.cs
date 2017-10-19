@@ -10,19 +10,22 @@ using ComicDemoApp.Models;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
+using ComicDemoApp.Utility;
+using Microsoft.Extensions.Options;
+using Microsoft.EntityFrameworkCore;
 
 namespace ComicDemoApp.Controllers
 {
     public class HomeController : Controller
     {
-        
-        //public IActionResult Index()
-        //{
-        //    //IEnumerable<ComicBook> comics = 
-        //    return View();
-        //}
+        private readonly ComicBookContext _context;
+        protected string Baseurl = "http://localhost:49277/";
 
-        string Baseurl = "http://localhost:3685/";
+        public HomeController(ComicBookContext context)
+        {
+            _context = context;
+        }
+
         public async Task<ActionResult> Index()
         {
             List<ComicBook> ComicBooks = new List<ComicBook>();
@@ -33,7 +36,7 @@ namespace ComicDemoApp.Controllers
                 client.DefaultRequestHeaders.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
  
-                HttpResponseMessage Res = await client.GetAsync("api/values/getcomics");
+                HttpResponseMessage Res = await client.GetAsync("api/ComicBooks/GetAllMyComics");
 
                 if (Res.IsSuccessStatusCode)
                 {
@@ -45,20 +48,45 @@ namespace ComicDemoApp.Controllers
             }
         }
 
-        public IActionResult About()
+        //public async Task<ActionResult> RemoveFromMyCollection()
+        //{
+        //    List<ComicBook> ComicBooks = new List<ComicBook>();
+
+        //    using (var client = new HttpClient())
+        //    {
+        //        client.BaseAddress = new Uri(Baseurl);
+        //        client.DefaultRequestHeaders.Clear();
+        //        client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+        //        HttpResponseMessage Res = await client.GetAsync("api/ComicBooks/GetAllMyComics");
+
+        //        if (Res.IsSuccessStatusCode)
+        //        {
+        //            var ComicResponse = Res.Content.ReadAsStringAsync().Result;
+        //            ComicBooks = JsonConvert.DeserializeObject<List<ComicBook>>(ComicResponse);
+
+        //        }
+        //        return View(ComicBooks);
+        //    }
+        //}
+
+        // GET: ComicBooks/Delete/5
+        public async Task<IActionResult> RemoveFromMyCollection(int? id)
         {
-            ViewData["Message"] = "Your application description page.";
+            if (id == null)
+            {
+                return NotFound();
+            }
 
-            return View();
+            var comicBook = await _context.ComicBooks
+                .SingleOrDefaultAsync(m => m.Id == id);
+            if (comicBook == null)
+            {
+                return NotFound();
+            }
+
+            return View(comicBook);
         }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

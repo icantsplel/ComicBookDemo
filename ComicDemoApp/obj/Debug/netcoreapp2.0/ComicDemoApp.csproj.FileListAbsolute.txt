@@ -3,13 +3,13 @@ C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApp\bin\Debug\netcoreapp2.0\Co
 C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApp\bin\Debug\netcoreapp2.0\ComicDemoApp.runtimeconfig.dev.json
 C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApp\bin\Debug\netcoreapp2.0\ComicDemoApp.dll
 C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApp\bin\Debug\netcoreapp2.0\ComicDemoApp.pdb
+C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApp\bin\Debug\netcoreapp2.0\ComicDemoApi.dll
+C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApp\bin\Debug\netcoreapp2.0\ComicDemoModels.dll
+C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApp\bin\Debug\netcoreapp2.0\ComicDemoApi.pdb
+C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApp\bin\Debug\netcoreapp2.0\ComicDemoModels.pdb
 C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApp\obj\Debug\netcoreapp2.0\ComicDemoApp.csprojResolveAssemblyReference.cache
 C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApp\obj\Debug\netcoreapp2.0\ComicDemoApp.csproj.CoreCompileInputs.cache
 C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApp\obj\Debug\netcoreapp2.0\ComicDemoApp.AssemblyInfoInputs.cache
 C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApp\obj\Debug\netcoreapp2.0\ComicDemoApp.AssemblyInfo.cs
 C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApp\obj\Debug\netcoreapp2.0\ComicDemoApp.dll
 C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApp\obj\Debug\netcoreapp2.0\ComicDemoApp.pdb
-C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApp\bin\Debug\netcoreapp2.0\ComicDemoModels.dll
-C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApp\bin\Debug\netcoreapp2.0\ComicDemoModels.pdb
-C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApp\bin\Debug\netcoreapp2.0\ComicDemoApi.dll
-C:\Users\micha\source\repos\ComicDemoApp\ComicDemoApp\bin\Debug\netcoreapp2.0\ComicDemoApi.pdb

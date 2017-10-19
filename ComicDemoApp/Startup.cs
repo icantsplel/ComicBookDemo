@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using ComicDemoModels;
+using ComicDemoApp.Utility;
 
 namespace ComicDemoApp
 {
@@ -23,8 +24,11 @@ namespace ComicDemoApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var appSettings = Configuration.GetSection("AppSettings");
             services.AddDbContext<ComicBookContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("AzureSqlDemo")));
             services.AddMvc();
+
+            services.Configure<AppSettings>(appSettings);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,8 +44,8 @@ namespace ComicDemoApp
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            app.UseStaticFiles();
-
+            //app.UseStaticFiles();
+            //app.UseMvcWithDefaultRoute();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

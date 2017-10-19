@@ -1,8 +1,8 @@
 ﻿@model IEnumerable<ComicDemoModels.ComicBook>
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Look Up Online";
 }
-<h2>My Collection</h2>
+<h2>Comic Vine Online Listing</h2>
 <table class="table">
     <thead>
         <tr>
@@ -35,11 +35,11 @@
     </thead>
     <tbody>
         @foreach (var item in Model)
-        {
+            {
             <tr>
-                <td>
+                <td>                
                     <img src="@Html.DisplayFor(modelItem => item.Image)" alt="IMAGES" />
-                </td>>
+                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.IssueNumber)
                 </td>
@@ -53,7 +53,7 @@
                     @Html.DisplayFor(modelItem => item.DateLastUpdated)
                 </td>
                 <td>
-                    <a href="@Html.DisplayFor(modelItem => item.IssueDetailURL)" target="_blank">Comic Vine Link</a>     
+                    <a href="@Html.DisplayFor(modelItem => item.IssueDetailURL)" target="_blank">Comic Vine Link</a>                 
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Volume)
@@ -62,7 +62,7 @@
                     @Html.DisplayFor(modelItem => item.UserNote)
                 </td>
                 <td>
-                    <a asp-controller="Home" asp-action="RemoveFromMyCollection" asp-route-id="@item.Id">Remove</a>
+                    <a asp-action="AddToMyCollection" asp-route-id="@item.Id">Add</a>
                 </td>
             </tr>
         }
