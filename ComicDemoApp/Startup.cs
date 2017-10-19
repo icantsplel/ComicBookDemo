@@ -44,7 +44,7 @@ namespace ComicDemoApp
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            //app.UseStaticFiles();
+            app.UseStaticFiles();
             //app.UseMvcWithDefaultRoute();
             app.UseMvc(routes =>
             {
