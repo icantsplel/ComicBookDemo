@@ -12,19 +12,24 @@ using ComicDemoModels;
 
 namespace ComicDemoApi.Controllers
 {
-    [Route("api/[controller]")]
+
     public class ValuesController : Controller
     {
         static string _address = "http://www.comicvine.com/api/issues/";
         static string _apikey = "7526d9a37e10834d099fd4d3f8feda72f1efc995"; //Comic Vine
 
         
-        [Route("api/values/getcomics")]
+        [Route("api/values/getcomics/{id?}")]
         [HttpGet]
-        public IActionResult GetComics()
+        public IActionResult GetComics(int? id)
         {
-            var url = _address + "?api_key=" + _apikey;
-           // var client = new WebClient();
+            string filter = string.Empty;
+            if (id !=null)
+            {
+                filter = "&filter=id:" + id.ToString();
+            }
+
+            var url = _address + "?api_key=" + _apikey + filter;
             HttpWebRequest request = WebRequest.Create(url) as HttpWebRequest;
             request.UserAgent = ".NET Framework Test Client";
 
@@ -39,10 +44,6 @@ namespace ComicDemoApi.Controllers
             {
                 responseText = reader.ReadToEnd();
             }
-
-
-            //add filter logic
-          
 
             XmlDocument xmlResult = new XmlDocument();
 
@@ -106,31 +107,6 @@ namespace ComicDemoApi.Controllers
             }
 
             return Ok(results);
-        }
-
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
         }
     }
 }

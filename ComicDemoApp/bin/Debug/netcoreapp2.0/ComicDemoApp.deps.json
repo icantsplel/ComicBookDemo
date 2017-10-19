@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "142b16b4e6fa58132bab04fa5d69e0d86ea31ef3"
+    "signature": "e205ff8eb95dae2fc13fbb774ac71aa0f086a9fb"
   },
   "compilationOptions": {
     "defines": [
@@ -25,6 +25,7 @@
         "dependencies": {
           "ComicDemoApi": "1.0.0",
           "ComicDemoModels": "1.0.0",
+          "Microsoft.AspNet.WebApi": "5.2.3",
           "Microsoft.AspNet.WebApi.Client": "5.2.3",
           "Microsoft.AspNetCore.All": "2.0.0",
           "Microsoft.NETCore.App": "2.0.0",
@@ -125,12 +126,39 @@
           "lib/netstandard1.6/Microsoft.AI.DependencyCollector.dll": {}
         }
       },
+      "Microsoft.AspNet.WebApi/5.2.3": {
+        "dependencies": {
+          "Microsoft.AspNet.WebApi.WebHost": "5.2.3"
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.3": {
         "runtime": {
           "lib/net45/System.Net.Http.Formatting.dll": {}
         },
         "compile": {
           "lib/net45/System.Net.Http.Formatting.dll": {}
+        }
+      },
+      "Microsoft.AspNet.WebApi.Core/5.2.3": {
+        "dependencies": {
+          "Microsoft.AspNet.WebApi.Client": "5.2.3"
+        },
+        "runtime": {
+          "lib/net45/System.Web.Http.dll": {}
+        },
+        "compile": {
+          "lib/net45/System.Web.Http.dll": {}
+        }
+      },
+      "Microsoft.AspNet.WebApi.WebHost/5.2.3": {
+        "dependencies": {
+          "Microsoft.AspNet.WebApi.Core": "5.2.3"
+        },
+        "runtime": {
+          "lib/net45/System.Web.Http.WebHost.dll": {}
+        },
+        "compile": {
+          "lib/net45/System.Web.Http.WebHost.dll": {}
         }
       },
       "Microsoft.AspNetCore/2.0.0": {
@@ -4281,12 +4309,33 @@
       "path": "microsoft.applicationinsights.dependencycollector/2.4.1",
       "hashPath": "microsoft.applicationinsights.dependencycollector.2.4.1.nupkg.sha512"
     },
+    "Microsoft.AspNet.WebApi/5.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mGBfSy61+2dIdPwgguW8EaCVsbYTwwVHeCc/pVq1PhlZS87ColgJ++Hve40TrX6Dtqde0fo9M1Tt19rXlHC5GA==",
+      "path": "microsoft.aspnet.webapi/5.2.3",
+      "hashPath": "microsoft.aspnet.webapi.5.2.3.nupkg.sha512"
+    },
     "Microsoft.AspNet.WebApi.Client/5.2.3": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-3kiI8peSXbXHDDrRuo+QaX0iCEVRe0nvn2dBDRw656uPX32UalbBlSIDUDlJxu05eau4tnuhsikiUuugvvoUoQ==",
       "path": "microsoft.aspnet.webapi.client/5.2.3",
       "hashPath": "microsoft.aspnet.webapi.client.5.2.3.nupkg.sha512"
+    },
+    "Microsoft.AspNet.WebApi.Core/5.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-o90QYlRV8VKR1S7+EcJw9w8WSyVFLl+IIzN8ILZ+n2t6rsc/KS8kBxRzA7wCFPRUHhebCfLqilBk39phvanx3g==",
+      "path": "microsoft.aspnet.webapi.core/5.2.3",
+      "hashPath": "microsoft.aspnet.webapi.core.5.2.3.nupkg.sha512"
+    },
+    "Microsoft.AspNet.WebApi.WebHost/5.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bhm4/BKdS3t6nK2R3NjCpxulcwtMFiHqVBDLuN3W5So1PhZfE+RBs7eVazGOhsEKCk7PoSmiSnl9DG0cpyfHtA==",
+      "path": "microsoft.aspnet.webapi.webhost/5.2.3",
+      "hashPath": "microsoft.aspnet.webapi.webhost.5.2.3.nupkg.sha512"
     },
     "Microsoft.AspNetCore/2.0.0": {
       "type": "package",

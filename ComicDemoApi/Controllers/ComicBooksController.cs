@@ -10,7 +10,7 @@ using ComicDemoModels;
 namespace ComicDemoApi.Controllers
 {
     [Produces("application/json")]
-    [Route("api/ComicBooks")]
+
     public class ComicBooksController : Controller
     {
         private readonly ComicBookContext _context;
@@ -20,34 +20,36 @@ namespace ComicDemoApi.Controllers
             _context = context;
         }
 
-        // GET: api/ComicBooks
+        [Route("api/ComicBooks/GetAllMyComics")]
         [HttpGet]
         public IEnumerable<ComicBook> GetComicBooks()
         {
             return _context.ComicBooks;
         }
 
-        // GET: api/ComicBooks/5
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetComicBook([FromRoute] int id)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+        //// GET: api/ComicBooks/5
+        //[HttpGet("{id}")]
+        //[Route("api/ComicBooks/GetAllMyComics")]
+        //public async Task<IActionResult> GetComicBook([FromRoute] int id)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return BadRequest(ModelState);
+        //    }
 
-            var comicBook = await _context.ComicBooks.SingleOrDefaultAsync(m => m.Id == id);
+        //    var comicBook = await _context.ComicBooks.SingleOrDefaultAsync(m => m.Id == id);
 
-            if (comicBook == null)
-            {
-                return NotFound();
-            }
+        //    if (comicBook == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            return Ok(comicBook);
-        }
+        //    return Ok(comicBook);
+        //}
 
         // PUT: api/ComicBooks/5
-        [HttpPut("{id}")]
+        [HttpPut]
+        [Route("api/ComicBooks/update/{id}")]
         public async Task<IActionResult> PutComicBook([FromRoute] int id, [FromBody] ComicBook comicBook)
         {
             if (!ModelState.IsValid)
@@ -83,6 +85,7 @@ namespace ComicDemoApi.Controllers
 
         // POST: api/ComicBooks
         [HttpPost]
+        [Route("api/ComicBooks/AddToCollection")]
         public async Task<IActionResult> PostComicBook([FromBody] ComicBook comicBook)
         {
             if (!ModelState.IsValid)
@@ -97,7 +100,8 @@ namespace ComicDemoApi.Controllers
         }
 
         // DELETE: api/ComicBooks/5
-        [HttpDelete("{id}")]
+        [HttpDelete]
+        [Route("api/ComicBooks/delete/{id}")]
         public async Task<IActionResult> DeleteComicBook([FromRoute] int id)
         {
             if (!ModelState.IsValid)

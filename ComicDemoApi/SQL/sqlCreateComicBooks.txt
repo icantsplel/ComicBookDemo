@@ -1,0 +1,16 @@
+﻿CREATE TABLE [dbo].[ComicBooks]
+(
+	[Id] INT NOT NULL PRIMARY KEY, 
+    [CoverDate] DATETIME NULL, 
+    [DateAdded] DATETIME NULL, 
+    [DateLastUpdated] DATETIME NULL, 
+    [Deck] NVARCHAR(MAX) NULL, 
+    [Description] NVARCHAR(MAX) NULL, 
+    [Image] VARCHAR(MAX) NULL, 
+    [IssueNumber] INT NULL, 
+    [Name] VARCHAR(MAX) NULL, 
+    [IssueDetailURL] VARCHAR(MAX) NULL, 
+    [Volume] INT NULL, 
+    [VolumeDetailURL] VARCHAR(MAX) NULL, 
+    [UserNote] NVARCHAR(MAX) NULL
+)
