@@ -1,11 +1,11 @@
 C:\Users\micha\source\repos\ComicDemoApp\ComicDemoModels\bin\Debug\netcoreapp2.0\ComicDemoModels.deps.json
 C:\Users\micha\source\repos\ComicDemoApp\ComicDemoModels\bin\Debug\netcoreapp2.0\ComicDemoModels.dll
 C:\Users\micha\source\repos\ComicDemoApp\ComicDemoModels\bin\Debug\netcoreapp2.0\ComicDemoModels.pdb
+C:\Users\micha\source\repos\ComicDemoApp\ComicDemoModels\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\micha\source\repos\ComicDemoApp\ComicDemoModels\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.xml
 C:\Users\micha\source\repos\ComicDemoApp\ComicDemoModels\obj\Debug\netcoreapp2.0\ComicDemoModels.csproj.CoreCompileInputs.cache
 C:\Users\micha\source\repos\ComicDemoApp\ComicDemoModels\obj\Debug\netcoreapp2.0\ComicDemoModels.AssemblyInfoInputs.cache
 C:\Users\micha\source\repos\ComicDemoApp\ComicDemoModels\obj\Debug\netcoreapp2.0\ComicDemoModels.AssemblyInfo.cs
 C:\Users\micha\source\repos\ComicDemoApp\ComicDemoModels\obj\Debug\netcoreapp2.0\ComicDemoModels.dll
 C:\Users\micha\source\repos\ComicDemoApp\ComicDemoModels\obj\Debug\netcoreapp2.0\ComicDemoModels.pdb
 C:\Users\micha\source\repos\ComicDemoApp\ComicDemoModels\obj\Debug\netcoreapp2.0\ComicDemoModels.csprojResolveAssemblyReference.cache
-C:\Users\micha\source\repos\ComicDemoApp\ComicDemoModels\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.dll
-C:\Users\micha\source\repos\ComicDemoApp\ComicDemoModels\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.xml
